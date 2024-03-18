@@ -21,25 +21,25 @@
  */
 
 type ToBeOrNotToBe = {
-    toBe: (val: any) => boolean;
-    notToBe: (val: any) => boolean;
+  toBe: (val: any) => boolean;
+  notToBe: (val: any) => boolean;
 };
 
 export function customExpect(val: unknown): ToBeOrNotToBe {
   return {
-      toBe: (comparison) => {
-          if (val === comparison) {
-              return true
-          }
+    toBe: (comparison) => {
+      if (val === comparison) {
+        return true
+      }
 
-          throw new Error('Not Equal')
-      },
-      notToBe: (comparison) => {
-          if (val !== comparison) {
-              return true;
-          }
+      throw new Error('Not Equal')
+    },
+    notToBe: (comparison) => {
+      if (val !== comparison) {
+        return true;
+      }
 
-          throw new Error('Equal')
-      },
+      throw new Error('Equal')
+    },
   }
 }

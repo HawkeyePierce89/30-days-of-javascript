@@ -16,9 +16,9 @@
  * console.log(myCounter()); // Outputs: 6
  */
 export function createCounter(n: number): () => number {
-    let count = n;
+  let count = n;
 
-    return function() {
-        return count++;
-    }
+  return function() {
+    return count++;
+  }
 }

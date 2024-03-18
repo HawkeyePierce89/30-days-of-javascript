@@ -9,8 +9,8 @@
  * and returns the string "Hello World".
  */
 export function createHelloWorld() {
-    return function(...args: unknown[]): string {
-        void args;
-        return "Hello World";
-    };
+  return function(...args: unknown[]): string {
+    void args;
+    return "Hello World";
+  };
 }
